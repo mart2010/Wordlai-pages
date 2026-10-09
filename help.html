@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wordlai Help</title>
+<meta name="description" content="How to set up Wordlai, generate crosswords, use hints and fix common problems.">
+<link rel="stylesheet" href="style.css">
+<link rel="alternate" hreflang="fr" href="fr/aide.html">
+</head>
+<body>
+<header class="site"><div class="bar">
+  <a class="brand" href="./">Wordlai</a>
+  <nav><a href="help.html">Help</a><a href="privacy.html">Privacy</a><a href="support.html">Support</a></nav>
+  <span class="lang">English · <a href="fr/aide.html">Français</a></span>
+</div></header>
+<main>
+  <h1>Help</h1>
+  <p class="lead">Everything you need to set up Wordlai and get the most out of it.</p>
+
+  <h2>Getting started</h2>
+  <h3>1. Connect an AI provider</h3>
+  <p>Wordlai has no server of its own. To create puzzles it asks an AI model for words and clues, so it needs an <strong>API key</strong> from a provider. On first launch the app asks whether you already have one and guides you otherwise.</p>
+  <ul>
+    <li><strong>No key yet?</strong> Create a free account at <a href="https://console.groq.com/keys">Groq</a> and generate a key. Wordlai's default setup uses Groq models.</li>
+    <li><strong>Already have a key?</strong> Supported providers: Anthropic, OpenAI, Google Gemini, OpenRouter, Groq, Mistral, xAI, DeepSeek and Alibaba (Qwen), plus any other OpenAI-compatible service via the “Custom” option.</li>
+  </ul>
+  <p>Paste the key in the app. It is stored on your device in Android's secure storage.</p>
+  <h3>2. Create a puzzle</h3>
+  <p>Open the new-puzzle form, choose a <strong>theme</strong>, the <strong>puzzle language</strong> and a <strong>difficulty</strong>, then generate. Generation takes a few seconds.</p>
+  <h3>3. Solve</h3>
+  <p>Tap a cell or a clue, then type. The clue for the selected word is shown above the grid. A completed puzzle shows your score.</p>
+
+  <h2>Frequently asked questions</h2>
+  <details><summary>Is Wordlai free?</summary>
+    <p>The app itself has no account and no ads. Puzzle generation uses your own API key, so any cost is whatever your provider charges. Groq's free tier is usually enough for casual use, and a puzzle uses very little.</p></details>
+  <details><summary>Can I use several providers?</summary>
+    <p>Yes, up to four. The first is the primary one; if it fails, the others are tried in order as fallbacks. Configure them in Preferences.</p></details>
+  <details><summary>How do hints work?</summary>
+    <p>Each word offers an <strong>alternate clue</strong> and a <strong>letter reveal</strong>. Hints cost points, and each word has a limited hint budget. The number of hints used and the points lost are shown on screen and counted in your stats.</p></details>
+  <details><summary>Why must I type accents exactly?</summary>
+    <p>Wordlai matches letters exactly: “É” and “E” are different letters. This is deliberate, because in some languages accented letters are separate letters of the alphabet. The app shows a one-time reminder when a puzzle contains accents.</p></details>
+  <details><summary>What is the app language versus the puzzle language?</summary>
+    <p>They are independent. The app interface is available in English, Spanish, Portuguese, German, French, Italian, Turkish, Tagalog, Polish and Vietnamese (it follows your phone's language unless you choose one in Preferences). Puzzles can be generated in 20 languages, whatever the interface language.</p></details>
+  <details><summary>Can I go back to earlier puzzles?</summary>
+    <p>Yes. Step backward and forward through your stored puzzles from the solving screen, or delete the one on display. Unfinished puzzles keep their progress and timer.</p></details>
+  <details><summary>What are the bucket list and excluded words?</summary>
+    <p>Pin a word to your <strong>bucket list</strong> to see it again in a later puzzle on that theme. Add a word to <strong>excluded words</strong> and it will never be suggested again. Both are in Preferences, organized by theme.</p></details>
+  <details><summary>What are the statistics?</summary>
+    <p>The Stats screen (solving screen menu) shows your overall score, puzzles completed, average completion time and the points lost to hints. The same menu lets you show either elapsed time or your overall score in the header.</p></details>
+  <details><summary>Where is my data stored?</summary>
+    <p>On your phone only. See the <a href="privacy.html">privacy policy</a>.</p></details>
+
+  <h2>Troubleshooting</h2>
+  <details><summary>“Generation failed” or nothing happens</summary>
+    <p>Check your internet connection and that your API key is valid and has remaining quota. Free tiers have rate limits: wait a minute and retry, or add a second provider as a fallback in Preferences.</p></details>
+  <details><summary>The app says my theme is “dry”</summary>
+    <p>For a very narrow theme, the AI can run out of fresh words. Wordlai then reuses earlier words and retries the AI after a few puzzles. Choosing a broader theme gives more variety.</p></details>
+  <details><summary>The grid has fewer words than I expected</summary>
+    <p>Grids are sparse: only words that can cross each other are placed, and answers too long for the grid are dropped. A different theme, difficulty or language can help.</p></details>
+  <details><summary>Some answers or clues look wrong</summary>
+    <p>Puzzles are written by an AI and checked automatically, but mistakes can slip through. Please <a href="support.html">tell us</a> with the theme and language and we will look into it.</p></details>
+</main>
+<footer class="site">
+  <a href="help.html">Help</a><a href="privacy.html">Privacy</a><a href="support.html">Support</a>
+  <div>© 2026 Wordlai</div>
+</footer>
+</body>
+</html>

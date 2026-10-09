@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aide Wordlai</title>
+<meta name="description" content="Configurer Wordlai, générer des mots croisés, utiliser les indices et résoudre les problèmes courants.">
+<link rel="stylesheet" href="../style.css">
+<link rel="alternate" hreflang="en" href="../help.html">
+</head>
+<body>
+<header class="site"><div class="bar">
+  <a class="brand" href="./">Wordlai</a>
+  <nav><a href="aide.html">Aide</a><a href="confidentialite.html">Confidentialité</a><a href="assistance.html">Assistance</a></nav>
+  <span class="lang"><a href="../help.html">English</a> · Français</span>
+</div></header>
+<main>
+  <h1>Aide</h1>
+  <p class="lead">Tout pour configurer Wordlai et en profiter pleinement.</p>
+
+  <h2>Premiers pas</h2>
+  <h3>1. Connecter un fournisseur d'IA</h3>
+  <p>Wordlai n'a pas de serveur. Pour créer des grilles, l'application demande des mots et des définitions à un modèle d'IA ; il lui faut donc une <strong>clé d'API</strong> auprès d'un fournisseur. Au premier lancement, l'application demande si vous en avez déjà une et vous guide sinon.</p>
+  <ul>
+    <li><strong>Pas encore de clé ?</strong> Créez un compte gratuit chez <a href="https://console.groq.com/keys">Groq</a> et générez une clé. La configuration par défaut de Wordlai utilise des modèles Groq.</li>
+    <li><strong>Vous avez déjà une clé ?</strong> Fournisseurs pris en charge : Anthropic, OpenAI, Google Gemini, OpenRouter, Groq, Mistral, xAI, DeepSeek et Alibaba (Qwen), ainsi que tout service compatible OpenAI via l'option « Personnalisé ».</li>
+  </ul>
+  <p>Collez la clé dans l'application. Elle est conservée sur votre appareil, dans le stockage sécurisé d'Android.</p>
+  <h3>2. Créer une grille</h3>
+  <p>Ouvrez le formulaire de nouvelle grille, choisissez un <strong>thème</strong>, la <strong>langue de la grille</strong> et une <strong>difficulté</strong>, puis lancez la génération. Elle prend quelques secondes.</p>
+  <h3>3. Résoudre</h3>
+  <p>Touchez une case ou une définition, puis saisissez les lettres. La définition du mot sélectionné s'affiche au-dessus de la grille. Une grille terminée affiche votre score.</p>
+
+  <h2>Questions fréquentes</h2>
+  <details><summary>Wordlai est-il gratuit ?</summary>
+    <p>L'application n'a ni compte ni publicité. La génération utilise votre propre clé d'API : le coût éventuel est celui de votre fournisseur. L'offre gratuite de Groq suffit généralement pour un usage occasionnel, et une grille consomme très peu.</p></details>
+  <details><summary>Puis-je utiliser plusieurs fournisseurs ?</summary>
+    <p>Oui, jusqu'à quatre. Le premier est le principal ; en cas d'échec, les autres sont essayés dans l'ordre. Configurez-les dans les Préférences.</p></details>
+  <details><summary>Comment fonctionnent les indices ?</summary>
+    <p>Chaque mot propose une <strong>autre définition</strong> et une <strong>révélation de lettre</strong>. Les indices coûtent des points, et chaque mot a un budget d'indices limité. Le nombre d'indices utilisés et les points perdus sont affichés et comptés dans vos statistiques.</p></details>
+  <details><summary>Pourquoi faut-il saisir les accents exactement ?</summary>
+    <p>Wordlai compare les lettres à l'identique : « É » et « E » sont deux lettres différentes. C'est voulu, car dans certaines langues les lettres accentuées sont des lettres distinctes de l'alphabet. L'application affiche un rappel unique quand une grille contient des accents.</p></details>
+  <details><summary>Quelle différence entre la langue de l'application et celle de la grille ?</summary>
+    <p>Elles sont indépendantes. L'interface existe en anglais, espagnol, portugais, allemand, français, italien, turc, tagalog, polonais et vietnamien (elle suit la langue du téléphone, sauf choix contraire dans les Préférences). Les grilles peuvent être générées en 20 langues, quelle que soit la langue de l'interface.</p></details>
+  <details><summary>Puis-je revenir à d'anciennes grilles ?</summary>
+    <p>Oui. Avancez et reculez dans vos grilles enregistrées depuis l'écran de résolution, ou supprimez celle affichée. Les grilles inachevées gardent leur progression et leur chronomètre.</p></details>
+  <details><summary>Que sont la liste à retenir et les mots exclus ?</summary>
+    <p>Épinglez un mot dans votre <strong>liste à retenir</strong> pour le revoir dans une prochaine grille sur ce thème. Ajoutez un mot aux <strong>mots exclus</strong> et il ne sera plus jamais proposé. Les deux se trouvent dans les Préférences, classés par thème.</p></details>
+  <details><summary>Que montrent les statistiques ?</summary>
+    <p>L'écran Statistiques (menu de l'écran de résolution) affiche votre score global, le nombre de grilles terminées, le temps moyen de résolution et les points perdus à cause des indices. Le même menu permet d'afficher dans l'en-tête soit le temps écoulé, soit votre score global.</p></details>
+  <details><summary>Où sont stockées mes données ?</summary>
+    <p>Uniquement sur votre téléphone. Voir la <a href="confidentialite.html">politique de confidentialité</a>.</p></details>
+
+  <h2>Dépannage</h2>
+  <details><summary>« La génération a échoué » ou rien ne se passe</summary>
+    <p>Vérifiez votre connexion internet, ainsi que la validité et le quota restant de votre clé d'API. Les offres gratuites ont des limites de débit : patientez une minute et réessayez, ou ajoutez un second fournisseur de secours dans les Préférences.</p></details>
+  <details><summary>L'application indique que mon thème est « épuisé »</summary>
+    <p>Sur un thème très étroit, l'IA peut manquer de mots nouveaux. Wordlai réutilise alors des mots précédents et relance l'IA après quelques grilles. Un thème plus large apporte plus de variété.</p></details>
+  <details><summary>La grille contient moins de mots que prévu</summary>
+    <p>Les grilles sont clairsemées : seuls les mots qui peuvent se croiser sont placés, et les réponses trop longues pour la grille sont écartées. Changer de thème, de difficulté ou de langue peut aider.</p></details>
+  <details><summary>Certaines réponses ou définitions semblent erronées</summary>
+    <p>Les grilles sont écrites par une IA et vérifiées automatiquement, mais des erreurs peuvent passer. <a href="assistance.html">Signalez-les-nous</a> avec le thème et la langue, nous regarderons.</p></details>
+</main>
+<footer class="site">
+  <a href="aide.html">Aide</a><a href="confidentialite.html">Confidentialité</a><a href="assistance.html">Assistance</a>
+  <div>© 2026 Wordlai</div>
+</footer>
+</body>
+</html>
